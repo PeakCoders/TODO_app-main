@@ -1,0 +1,18 @@
+{% extends 'tasks/list.html' %}
+
+{% block body_block %}
+
+
+<h2 class="title">Are you sure you want to delete {{item}} ?</h2>
+
+<div class="container my-box">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p ><input value="YES" class="btn btn-danger" type="Submit" name="Confirm"></p>
+        <p><a class="btn btn-secondary" href="{% url 'tasks_list' %}" >NO</a></p>
+    </form>
+    
+</div>
+
+{% endblock %}

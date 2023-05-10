@@ -1,0 +1,17 @@
+
+
+{% extends 'tasks/list.html' %}
+
+{% block body_block %}
+
+<h2 class="title">UPDATE TASK</h2>
+    
+<div class="container my-box update">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn btn-primary update-btn" type="submit" value="UPDATE" name="Update Your Task">
+    </form>
+</div>
+
+{% endblock %}
